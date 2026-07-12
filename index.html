@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Allowance Ledger</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Allowance Ledger</p>
+        <h1>Quinn &amp; Logan</h1>
+        <p class="hero-copy">
+          Track weekly allowance, extra credits, and debts in one place.
+        </p>
+      </header>
+      <section class="summary-card" aria-label="Household summary">
+        <div>
+          <p class="section-label">Household total</p>
+          <p class="summary-balance" id="household-total">$0.00</p>
+        </div>
+        <p class="summary-note" id="weekly-status"></p>
+      </section>
+      <section id="children" class="children-grid" aria-live="polite"></section>
+    </main>
+    <template id="child-template">
+      <article class="child-card">
+        <div class="card-header">
+          <div>
+            <p class="section-label child-name"></p>
+            <p class="child-balance"></p>
+          </div>
+          <label class="weekly-field">
+            <span>Weekly allowance</span>
+            <input class="weekly-input" type="number" min="0" step="0.01" inputmode="decimal" />
+          </label>
+        </div>
+        <form class="entry-form">
+          <div class="form-grid">
+            <label>
+              <span>Type</span>
+              <select name="type">
+                <option value="credit">Credit</option>
+                <option value="debt">Debt</option>
+              </select>
+            </label>
+            <label>
+              <span>Amount</span>
+              <input name="amount" type="number" min="0.01" step="0.01" inputmode="decimal" required />
+            </label>
+          </div>
+          <label>
+            <span>Note</span>
+            <input name="note" type="text" maxlength="80" placeholder="Chore, purchase, reward..." />
+          </label>
+          <button type="submit">Add entry</button>
+        </form>
+        <section class="list-section">
+          <div class="list-header">
+            <h2>Debts</h2>
+          </div>
+          <ul class="entry-list debt-list"></ul>
+        </section>
+        <section class="list-section">
+          <div class="list-header">
+            <h2>Full activity</h2>
+          </div>
+          <ul class="entry-list activity-list"></ul>
+        </section>
+      </article>
+    </template>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
