@@ -1,0 +1,13 @@
+name: allowance-ledger
+metadata:
+  template: allowance-ledger@0.0.1
+services:
+  web:
+    project: .
+    dist: ./web
+    language: js
+    host: staticwebapp
+    config:
+      apiLocation: ./api
+      apiLanguage: node
+      apiVersion: 20

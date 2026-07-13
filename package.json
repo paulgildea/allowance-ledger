@@ -4,8 +4,10 @@
   "description": "A simple allowance tracker for your kids",
   "type": "module",
   "scripts": {
-    "start": "python3 -m http.server 4173",
-    "test": "node --test"
+    "start": "python3 -m http.server 4173 --directory web",
+    "test": "node --test app.test.js",
+    "api:install": "npm --prefix api install",
+    "api:start": "npm --prefix api run start"
   },
   "repository": {
     "type": "git",

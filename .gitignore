@@ -1,0 +1,6 @@
+node_modules/
+api/node_modules/
+.env
+.azure/*/.env
+.azure/*/.env.lock
+api/local.settings.json
