@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "LEDGER_CONTAINER": "ledger",
+    "WEEKLY_CREDIT_AMOUNT": "5"
+  }
+}
